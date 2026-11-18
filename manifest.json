@@ -1,0 +1,16 @@
+{
+  "name": "Roll20 Dark Mode Fix",
+  "manifest_version": 3,
+  "version": "1.0.1",
+  "description": "Look for text that blends into background color and invert it.",
+  "action": {
+    "default_icon": "./dark-theme.svg"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://app.roll20.net/editor*"],
+      "js": ["colorFix.js"]
+    }
+  ]
+}
