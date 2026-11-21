@@ -8,7 +8,6 @@ function getRGBDistance(color1, color2) {
 
 function recurseChildren(children = []) {
   for (const child of children) {
-    const style = window.getComputedStyle(child);
     if (child.hasChildNodes) {
       recurseChildren(child.childNodes);
     }
